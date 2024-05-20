@@ -1,6 +1,6 @@
 {
   "name": "@xuedongs/cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "@xuedongs/cli",
   "bin": {
     "xuedongs": "bin/xuedongs.js"
