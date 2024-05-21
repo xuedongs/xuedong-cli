@@ -33,19 +33,19 @@ importers:
   packages/xuedongs-cli:
     dependencies:
       '@xuedongs/cli-plugin-babel':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../xuedongs-cli-plugin-babel
       '@xuedongs/cli-plugin-linter':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../xuedongs-cli-plugin-linter
       '@xuedongs/cli-plugin-router':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../xuedongs-cli-plugin-router
       '@xuedongs/cli-plugin-vuex':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../xuedongs-cli-plugin-vuex
       '@xuedongs/cli-service':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../xuedongs-cli-service
       chalk:
         specifier: ^4.1.0
@@ -96,8 +96,8 @@ importers:
         specifier: ^1.20.0
         version: 1.22.8
       slash:
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^3.0.0
+        version: 3.0.0
       strip-ansi:
         specifier: ^6.0.0
         version: 6.0.0
@@ -4036,10 +4036,6 @@ packages:
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
-
-  slash@5.1.0:
-    resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
-    engines: {node: '>=14.16'}
 
   slice-ansi@5.0.0:
     resolution: {integrity: sha512-FC+lgizVPfie0kkhqUScwRu1O/lF6NOgJmlCgK+/LYxDCTk8sGelYaHDhFcDN+Sn3Cv+3VSa4Byeo+IMCzpMgQ==}
@@ -9146,8 +9142,6 @@ snapshots:
   signal-exit@4.1.0: {}
 
   slash@3.0.0: {}
-
-  slash@5.1.0: {}
 
   slice-ansi@5.0.0:
     dependencies:

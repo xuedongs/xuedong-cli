@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "@xuedongs/cli-service",
   "bin": {
-    "@xuedongs/cli-service": "bin/@xuedongs/cli-service.js"
+    "xuedongs-cli-service": "bin/xuedongs-cli-service.js"
   },
   "author": "sunxuedong <hal_focus@163.com>",
   "homepage": "https://github.com/sunxuedong/cli-demo#readme",

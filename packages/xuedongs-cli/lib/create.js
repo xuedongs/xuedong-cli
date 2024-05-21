@@ -90,10 +90,25 @@ async function create(name) {
   // 填入 cli-service 必选项，无需用户选择
   answers.features.unshift("service");
   answers.features.forEach(feature => {
+    let packageName;
     if (feature !== "service") {
-      pkg.devDependencies[`@xuedongs/cli-plugin-${feature}`] = "~1.0.0";
+      packageName = `@xuedongs/cli-plugin-${feature}`;
     } else {
-      pkg.devDependencies["@xuedongs/cli-service"] = "~1.0.0";
+      packageName = `@xuedongs/cli-service`;
+    }
+
+    const packageJSON = require(`../package.json`);
+    const version = packageJSON.dependencies[packageName];
+    const ifWorkspaceMode = version.includes("workspace"); // 开发模式使用workspace版本
+
+    if (ifWorkspaceMode) {
+      pkg.devDependencies[packageName] = `file:${path.join(
+        __dirname,
+        "../node_modules",
+        packageName
+      )}`;
+    } else {
+      pkg.devDependencies[packageName] = `^${version}`;
     }
   });
 

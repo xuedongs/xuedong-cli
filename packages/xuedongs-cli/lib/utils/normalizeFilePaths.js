@@ -1,4 +1,4 @@
-const slash = import("slash");
+const slash = require("slash");
 
 // Unix    => foo/bar
 // Windows => foo\\bar
